@@ -1,34 +1,119 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>CodSoftT Internship Projects</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CODSOFT Internship Projects</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <style>
+    :root {
+      --bg: #f2f4f8;
+      --text: #333;
+      --card: #fff;
+    }
+    [data-theme='dark'] {
+      --bg: #1a1a1a;
+      --text: #eee;
+      --card: #2c2c2c;
+    }
     body {
-      font-family: Arial, sans-serif;
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      transition: all 0.3s ease;
+    }
+    .container {
+      background: var(--card);
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
       text-align: center;
-      margin-top: 60px;
+      max-width: 500px;
+      width: 90%;
     }
     h1 {
       color: #0077cc;
+      margin-bottom: 10px;
     }
-    a {
+    p.subtitle {
+      font-size: 1.1rem;
+      margin-bottom: 30px;
+      color: #666;
+    }
+    .link {
       display: block;
-      margin: 12px;
-      font-size: 20px;
-      color: #333;
-      text-decoration: none;
-    }
-    a:hover {
+      margin: 16px 0;
+      font-size: 1.1rem;
       color: #0077cc;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+    .link i {
+      margin-right: 8px;
+    }
+    .link:hover {
+      text-decoration: underline;
+      color: #005fa3;
+    }
+    .desc {
+      font-size: 0.9rem;
+      color: #888;
+      margin-top: 2px;
+    }
+    .toggle-btn {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: var(--card);
+      color: var(--text);
+      border: none;
+      border-radius: 50%;
+      padding: 10px 12px;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      font-size: 1rem;
     }
   </style>
 </head>
 <body>
-  <h2>Projects</h2>
-  <ul>
-  <li><a href="CodSoft Internship/Projects/Calculator/index.html" target="_blank">Calculator</a></li>
-  <li><a href="CodSoft Internship/Projects/Landing Page/index.html" target="_blank">Landing Page</a></li>
-  <li><a href="CodSoft Internship/Projects/Portfolio/index.html" target="_blank">Portfolio</a></li>
-    </ul>
+  <button class="toggle-btn" onclick="toggleTheme()" title="Toggle Dark Mode">
+    <i class="fas fa-moon"></i>
+  </button>
+
+  <div class="container">
+    <h1>CODSOFT Internship</h1>
+    <p class="subtitle">Internship Projects Showcase</p>
+
+    <a class="link" href="CodSoft Internship/Projects/Calculator/index.html" target="_blank">
+      <i class="fas fa-calculator"></i> Calculator
+    </a>
+    <p class="desc">A simple arithmetic calculator with basic UI.</p>
+
+    <a class="link" href="CodSoft Internship/Projects/Landing Page/index.html" target="_blank">
+      <i class="fas fa-globe"></i> Landing Page
+    </a>
+    <p class="desc">Beautiful responsive landing page design.</p>
+
+    <a class="link" href="CodSoft Internship/Projects/Portfolio/index.html" target="_blank">
+      <i class="fas fa-user"></i> Portfolio
+    </a>
+    <p class="desc">Personal portfolio with your skills and projects.</p>
+  </div>
+
+  <script>
+    function toggleTheme() {
+      const current = document.documentElement.getAttribute('data-theme');
+      document.documentElement.setAttribute(
+        'data-theme',
+        current === 'dark' ? 'light' : 'dark'
+      );
+    }
+  </script>
 </body>
 </html>
