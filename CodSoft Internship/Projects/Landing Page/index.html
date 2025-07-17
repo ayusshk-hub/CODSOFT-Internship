@@ -1,116 +1,53 @@
-/* General Styles */
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: #f2f2f2;
-  color: #333;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Landing Page</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
 
-/* Header */
-header {
-  background-color: #003366;
-  padding: 15px 20px;
-  color: white;
-}
+  <!-- Header Section -->
+  <header>
+    <nav>
+      <div class="logo">MyLanding</div>
+      <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Features</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-nav {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-}
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Welcome to My Landing Page</h1>
+    <p>Clean and modern design to showcase your product or service.</p>
+    <a href="#" class="cta-button">Get Started</a>
+  </section>
 
-.logo {
-  font-size: 1.5em;
-  font-weight: bold;
-}
+  <!-- Features Section -->
+  <section class="features">
+    <div class="feature-box">
+      <h2>Fast</h2>
+      <p>Our platform delivers blazing fast performance.</p>
+    </div>
+    <div class="feature-box">
+      <h2>Responsive</h2>
+      <p>Looks great on all devices – mobile, tablet, and desktop.</p>
+    </div>
+    <div class="feature-box">
+      <h2>Easy to Use</h2>
+      <p>Simple and intuitive design for a smooth experience.</p>
+    </div>
+  </section>
 
-.nav-links {
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
-  padding: 0;
-  margin: 10px 0 0;
-}
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 MyLanding. All rights reserved.</p>
+  </footer>
 
-.nav-links a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-/* Hero Section */
-.hero {
-  text-align: center;
-  padding: 60px 20px;
-  background: linear-gradient(to right, #0059b3, #0073e6);
-  color: white;
-}
-
-.hero h1 {
-  font-size: 2em;
-  margin-bottom: 10px;
-}
-
-.hero p {
-  font-size: 1.1em;
-}
-
-.cta-button {
-  display: inline-block;
-  margin-top: 20px;
-  padding: 12px 24px;
-  background-color: white;
-  color: #0059b3;
-  text-decoration: none;
-  border-radius: 6px;
-  font-weight: bold;
-}
-
-/* Features Section */
-.features {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-  padding: 40px 20px;
-  background-color: white;
-}
-
-.feature-box {
-  background-color: #e6f2ff;
-  padding: 20px;
-  border-radius: 10px;
-  width: 300px;
-  text-align: center;
-}
-
-/* Footer */
-footer {
-  background-color: #003366;
-  color: white;
-  text-align: center;
-  padding: 20px;
-}
-
-/* Media Queries */
-@media (max-width: 768px) {
-  nav {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .nav-links {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .hero h1 {
-    font-size: 1.5em;
-  }
-
-  .feature-box {
-    width: 100%;
-  }
-}
+</body>
+</html>
